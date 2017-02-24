@@ -3,15 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>kevinlorry | Hexo</title>
+  <title>网络和后台接入 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="kevinlorry">
+  <meta name="description" content="1.网站请求察看 F12 找到network 刷新找到 html 选中后 点response  可以查看后端请求的信息 url和地址栏一样  察看请求方式 有 get  post  （网页里面 link  img 等请求都会出现在network 页面）     信息详情里 有和url一一对应的数据名称  这就是请求查询的姿势 2.后台请求实现 请求数据 常用xhr （json）  通过js发起请求">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络和后台接入">
 <meta property="og:url" content="http://yoursite.com/2017/02/24/kevinlorry/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:updated_time" content="2017-02-24T15:12:42.331Z">
+<meta property="og:description" content="1.网站请求察看 F12 找到network 刷新找到 html 选中后 点response  可以查看后端请求的信息 url和地址栏一样  察看请求方式 有 get  post  （网页里面 link  img 等请求都会出现在network 页面）     信息详情里 有和url一一对应的数据名称  这就是请求查询的姿势 2.后台请求实现 请求数据 常用xhr （json）  通过js发起请求">
+<meta property="og:updated_time" content="2017-02-24T15:35:28.334Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="kevinlorry">
+<meta name="twitter:title" content="网络和后台接入">
+<meta name="twitter:description" content="1.网站请求察看 F12 找到network 刷新找到 html 选中后 点response  可以查看后端请求的信息 url和地址栏一样  察看请求方式 有 get  post  （网页里面 link  img 等请求都会出现在network 页面）     信息详情里 有和url一一对应的数据名称  这就是请求查询的姿势 2.后台请求实现 请求数据 常用xhr （json）  通过js发起请求">
 <meta property="fb:app_id" content="localhost:4000">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -50,9 +53,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -75,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      kevinlorry
+      网络和后台接入
     </h1>
   
 
@@ -83,11 +86,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>1.网站请求察看<br> F12 找到network 刷新找到 html 选中后 点response  可以查看后端请求的信息 url和地址栏一样  察看请求方式 有 get  post<br>  （网页里面 link  img 等请求都会出现在network 页面）<br>     信息详情里 有和url一一对应的数据名称  这就是请求查询的姿势<br> 2.后台请求实现<br> 请求数据 常用xhr （json）  通过js发起请求获得数据<br>以用axios 为例<br>请求姿势 axios.get(“url”).then(function(response){<br>console.log(response)<br>})<br>对数据进行请求和引用</p>
+<p>首先引入axios<br>import axios from “axios”</p>
+<p>然后data（） 同级<br> created(){<br> this.getit()<br> },<br> methods:{<br> getit(){<br> axios.get(“xxx”).then()<br> }<br> }</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/24/kevinlorry/" data-id="cizjyj7310000kgoqvyeasvf9" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/02/24/kevinlorry/" data-id="cizjzdao20001hwoqnwo3y6z3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -98,7 +104,7 @@
   
   
     <a href="/2017/02/16/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">Hello World！！</div>
     </a>
   
@@ -131,12 +137,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/02/24/kevinlorry/">kevinlorry</a>
+            <a href="/2017/02/24/kevinlorry/">网络和后台接入</a>
           </li>
         
           <li>
@@ -156,7 +162,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
