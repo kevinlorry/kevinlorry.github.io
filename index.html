@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Kevinlorry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Kevinlorry">
+<meta property="og:url" content="http://kevinlorry.himmas.cc/index.html">
+<meta property="og:site_name" content="Kevinlorry">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kevinlorry">
+  
+    <link rel="alternate" href="/atom.xml" title="Kevinlorry" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Kevinlorry</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://kevinlorry.himmas.cc"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-show" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/25/show/" class="article-date">
+  <time datetime="2019-07-25T08:18:06.673Z" itemprop="datePublished">2019-07-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/25/show/">show</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="例一"><a href="#例一" class="headerlink" title="例一"></a>例一</h2><p>给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。</p>
+<p>如果你最多只允许完成一笔交易（即买入和卖出一支股票），设计一个算法来计算你所能获取的最大利润。</p>
+<p>注意你不能在买入股票前卖出股票。</p>
+<pre><code>输入: [7,1,5,3,6,4]
+输出: 5
+解释: 在第 2 天（股票价格 = 1）的时候买入，在第 5 天（股票价格 = 6）的时候卖出，最大利润 = 6-1 = 5 。
+注意利润不能是 7-1 = 6, 因为卖出价格需要大于买入价格。
+
+输入: [7,6,4,3,1]
+输出: 0
+解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。    </code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> maxProfit = <span class="keyword">function</span>(prices) &#123;</span><br><span class="line">  <span class="built_in">let</span> x= [];</span><br><span class="line">  <span class="built_in">let</span> max = 0;</span><br><span class="line">  <span class="keyword">for</span>(<span class="built_in">let</span> i = 1;i &lt; prices.length;i++)&#123;</span><br><span class="line">    <span class="built_in">let</span> min = prices[0];</span><br><span class="line">    <span class="keyword">for</span>(<span class="built_in">let</span> k = 1 ; k &lt; i;k++)&#123;</span><br><span class="line">        min = Math.min(min,prices[k])</span><br><span class="line">    &#125;</span><br><span class="line">    max = Math.max(prices[i] - min,max)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">return</span> max</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="例二"><a href="#例二" class="headerlink" title="例二"></a>例二</h2><p>给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。</p>
+<p>设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。</p>
+<p>注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。</p>
+<pre><code>输入: [7,1,5,3,6,4]
+输出: 7
+解释: 在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。
+随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6-3 = 3 。
+
+
+输入: [1,2,3,4,5]
+输出: 4
+解释: 在第 1 天（股票价格 = 1）的时候买入，在第 5 天 （股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。
+注意你不能在第 1 天和第 2 天接连购买股票，之后再将它们卖出。
+因为这样属于同时参与了多笔交易，你必须在再次购买前出售掉之前的股票。</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> maxProfit = <span class="keyword">function</span>(prices) &#123;</span><br><span class="line">  <span class="built_in">let</span> money = 0</span><br><span class="line">    <span class="keyword">for</span>(<span class="built_in">let</span> i =1;i&lt;prices.length;i++)&#123;</span><br><span class="line">      <span class="keyword">if</span>(prices[i]&gt;prices[i-1])&#123;</span><br><span class="line">        money += prices[i]-prices[i-1]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="built_in">return</span> money</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="例三"><a href="#例三" class="headerlink" title="例三"></a>例三</h2><p>假设你正在爬楼梯。需要 n 阶你才能到达楼顶。</p>
+<p>每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？</p>
+<p>注意：给定 n 是一个正整数。</p>
+<pre><code>输入： 2
+输出： 2
+解释： 有两种方法可以爬到楼顶。
+1.  1 阶 + 1 阶
+2.  2 阶
+
+输入： 3
+输出： 3
+解释： 有三种方法可以爬到楼顶。
+1.  1 阶 + 1 阶 + 1 阶
+2.  1 阶 + 2 阶
+3.  2 阶 + 1 阶</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> climbStairs = <span class="keyword">function</span>(n) &#123;</span><br><span class="line">  <span class="built_in">let</span> x = [];</span><br><span class="line">  x[1] = 1;</span><br><span class="line">  x[2] = 2</span><br><span class="line">  <span class="keyword">for</span>(<span class="built_in">let</span> i = 3; i&lt;=n ; i++)&#123;</span><br><span class="line">    x[i] = x[i-1]+x[i-2]</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">return</span> x[n]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>##例四</p>
+<p>你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。</p>
+<p>给定一个代表每个房屋存放金额的非负整数数组，计算你在不触动警报装置的情况下，能够偷窃到的最高金额。</p>
+<pre><code>输入: [1,2,3,1]
+输出: 4
+解释: 偷窃 1 号房屋 (金额 = 1) ，然后偷窃 3 号房屋 (金额 = 3)。
+偷窃到的最高金额 = 1 + 3 = 4 。
+
+输入: [2,7,9,3,1]
+输出: 12
+解释: 偷窃 1 号房屋 (金额 = 2), 偷窃 3 号房屋 (金额 = 9)，接着偷窃 5 号房屋 (金额 = 1)。
+偷窃到的最高金额 = 2 + 9 + 1 = 12 。</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">    <span class="built_in">let</span> rob = <span class="keyword">function</span>(nums) &#123;</span><br><span class="line">    <span class="built_in">let</span> mon = [];</span><br><span class="line">    mon[0] = nums[0];</span><br><span class="line">    mon[1] = nums[1];</span><br><span class="line">    mon[2] = nums[0] + nums[2]</span><br><span class="line">    <span class="keyword">for</span>(<span class="built_in">let</span> i =3;i&lt;nums.length;i++)&#123;</span><br><span class="line">      mon[i] = Math.max(mon[i-2],mon[i-3]) +nums[i]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> Math.max(mon[nums.length-1],mon[nums.length-2]||0)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://kevinlorry.himmas.cc/2019/07/25/show/" data-id="cjyibiiq500017qudb91plfzc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/07/25/show/">show</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
